@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Fonts/fonts.css" >    
+    <link rel="stylesheet" href="css/icofont/icofont.css">
+    <link rel="stylesheet" href="Js/col/color-picker.css">
+
+    <script src="Js/jquery-3.3.1.js"></script>
+    <script src="Js/main.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div style="position: absolute;padding: 3px; left: 0; top: 0;"><img src="g905.png" height="30" alt=""></div>
+        <div onclick="toolb('.toolBar',$(this))"><i class="icofont-tools-alt-2"></i></div>
+        <div  onclick="$('.focus').remove()"><i class="icofont-ui-delete"></i></div>
+        <div class="codeS"  onclick="toolb('.code',$(this))"><i class="icofont-ui-copy"></i></div>           
+    </div>
+    <div class="tooB" >
+            <div style="float: right;" class="tool">
+                             </div>
+    <!---    <button class="add" onclick="$('.adder').toggleClass('viadd');$(this).toggleClass('addB','add');"></button>--->
+        <div class="adder">
+            <button  tag="op" inner="HeadLines"  data="h2">h2</button>
+            <button  tag="op" inner="HeadLines" data="h3">h3</button>
+            <button  tag="op" inner="HeadLines"  data="p">P</button>
+            <button  tag="op" inner="HeadLines"  data="h1">h1</button>
+            <button  tag="op" inner="HeadLines"  data="div">D</button>
+            <button  tag="op" inner="HeadLines"  data="span"><i class="icofont-file-text"></i></button>
+            <button  tag="close" inner=""  data="img"><i class="icofont-picture"></i></button>
+
+    
+        </div>
+        
+    </div>
+    <div  class="cont">
+        <div id="conte">
+            <div style="padding:50px;   min-height: 300px; min-width: 100px;" contenteditable="true"></div>
+        </div>
+    </div>
+    <div class="toolBar hi">
+        <script src="Js/col/color-picker.js"></script>
+        <div>
+            <div class="subH">Font</div>
+            <div class="big"><i class="icofont-font"></i><input mod="sel" sel-data="fonts" type="text" data="font-family"><div class="int">font</div></div>
+            <div class="small"><i class="icofont-text-height"></i><input  mod="txt"  type="number" data="font-size"><button>px</button><div class="int">font-size</div></div>
+            <div class="small"><i class="icofont-line-height"></i><input mod="txt" type="number" data="line-height"><button>px</button><div class="int">line-height</div></div>
+            <div class="small"><i class="icofont-text-width"></i><input mod="txt" min="100" max="900" type="range" data="font-weight"><div class="int">font-weight</div></div>
+        </div>
+        
+        <div>
+            <div class="subH">Layout</div>
+            <div class="small"><i class="icofont-curved-right"></i><input mod="txt" type="number" data="margin"><button>px</button><div class="int">margin</div></div>
+            <div class="small"><i class="icofont-curved-left"></i><input mod="txt" type="number" data="padding"><button>px</button><div class="int">padding</div></div>
+            <div class="small"><i class="icofont-vector-path"></i><input mod="txt" type="number" data="border-radius"><button>px</button><div class="int">border-radius</div></div>
+            <div class="small"><i onclick="txtafter($(this),'max-content')" class="icofont-resize"></i><input  mod="txt"  type="number" data="height"><button>px</button><div class="int">height</div></div>
+            <div class="small"><i onclick="txtafter($(this),'max-content')" class="icofont-sign-in"></i><input mod="txt" type="number" data="width"><button>px</button><div class="int">width</div></div>
+  
+        </div>
+            
+        <div>
+            <div class="subH">Style</div>
+                <i style="position: relative; top:8px" class="icofont-font"></i><div mod="col" data="color"></div>
+                <i class="icofont-paint" style="position: relative; top:8px"></i><div mod="col" data="background-color"></div>
+
+            <div  mod="txtcm" data="border" class="big">Border<br><input type="range" cdata="border"><button type="text" cdata="border">solid</button><input mod="Ccol"  type="text" cdata="border"/></div>
+            <div  mod="txtcm" data="box-shadow" class="big">Shadow<br><input type="range" cdata="box-shadow"><input  type="range" cdata="box-shadow"/><input  type="range" cdata="box-shadow"/><input  type="range" cdata="box-shadow"/><button type="text" cdata="Shadow"> </button><input type="text"  mod="Ccol" cdata="box-shadow"/></div>    
+            <div  mod="txtcm" data="text-shadow" class="big">Text Shadow<br><input type="range" cdata="text-shadow"><input  type="range" cdata="text-shadow"/><input   type="range" cdata="text-shadow"/><input mod="Ccol"  type="text" cdata="text-shadow"/></div>    
+
+        </div>
+    
+       
+       <div>
+            <div class="subH">Align</div>
+                <div mod="tgB" type="text" datatype="text-align" data="justify"><i style="" class="icofont-justify-all"></i></div>
+                <div mod="tgB" type="text" datatype="text-align" data="left"><i class="icofont-justify-left" style=""></i></div>
+                <div mod="tgB" type="text" datatype="text-align" data="center"><i class="icofont-justify-center" style=""></i></div>
+                <div mod="tgB" type="text" datatype="text-align" data="right"><i class="icofont-justify-right" style=""></i></div>
+        </div>
+        <div>
+            <div class="subH">float</div>
+                <div mod="tgB" type="text" datatype="float" data="left"><i class="icofont-justify-left" style=""></i></div>
+                <div mod="tgB" type="text" datatype="float" data="right"><i class="icofont-justify-right" style=""></i></div>
+        </div>
+
+        <div sp="img">
+            <div class="subH">Image</div>
+            <div class="big"><i class="icofont-file-image"></i><input mod="attr" type="text" Attrdata="src"></div>
+            <div class="big"><i class="icofont-ui-image"></i><input mod="txtWSuf" suf="url(Suf)" value="" type="text" data="background-image"></div>
+        </div>
+    </div>
+
+    <div class="code hi">
+        <textarea ></textarea>
+    </div>  
+</body>
+</html>
